@@ -8,7 +8,7 @@ describe('Grounds', function () {
     this.actionwords.iHandleEverythingExceptTheGrounds();
   });
 
-  it('Message "Empty grounds" is displayed after 30 coffees are taken', function () {
+  it('Message "Empty grounds" is displayed after 30 coffees are taken (uid:1b80f2ff-095f-42fc-9ee6-a025448af4f0)', function () {
     // Tags: priority:high
     // When I take "30" coffees
     this.actionwords.iTakeCoffeeNumberCoffees(30);
@@ -16,7 +16,7 @@ describe('Grounds', function () {
     this.actionwords.messageMessageShouldBeDisplayed("Empty grounds");
   });
 
-  it('When the grounds are emptied, message is removed', function () {
+  it('When the grounds are emptied, message is removed (uid:6b76fef5-a7b5-4000-afa6-987069c08a6d)', function () {
     // Tags: priority:medium
     // When I take "30" coffees
     this.actionwords.iTakeCoffeeNumberCoffees(30);

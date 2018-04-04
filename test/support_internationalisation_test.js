@@ -13,17 +13,17 @@ describe('Support internationalisation', function () {
       this.actionwords.messageMessageShouldBeDisplayed(ready_message);
     }
 
-    it('English', function () {
+    it('English (uid:d0ea589b-21c2-4c49-b4c6-8539841ae0f0)', function () {
       messagesAreBasedOnLanguage.apply(this, ['en', 'Ready']);
     });
 
-    it('French', function () {
+    it('French (uid:93b02222-348a-4374-b79e-1803cf126db5)', function () {
       messagesAreBasedOnLanguage.apply(this, ['fr', 'Pret']);
     });
   });
 
 
-  it('No messages are displayed when machine is shut down', function () {
+  it('No messages are displayed when machine is shut down (uid:c414a32b-9be6-4775-bccb-b3507825d4bb)', function () {
     // Tags: priority:medium
     // Given the coffee machine is started
     this.actionwords.theCoffeeMachineIsStarted();

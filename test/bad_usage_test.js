@@ -4,7 +4,7 @@ describe('Bad usage', function () {
     this.actionwords.sut = require('../src/coffee_machine.js').CoffeeMachine();
   });
 
-  it('Full grounds does not block coffee', function () {
+  it('Full grounds does not block coffee (uid:c80a2938-5a40-4829-ab54-e7bedcf98de3)', function () {
     // You keep getting coffee even if the "Empty grounds" message is displayed. That said it's not a fantastic idea, you'll get ground everywhere when you'll decide to empty it.
     // Tags: priority:low
     // Given the coffee machine is started
