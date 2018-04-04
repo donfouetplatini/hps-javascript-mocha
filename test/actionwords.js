@@ -1,112 +1,74 @@
-var assert = require('assert');
-
 exports.Actionwords = {
   iStartTheCoffeeMachineUsingLanguageLang: function (lang) {
-    this.sut.start(lang);
+    // TODO: Implement action: "Start the coffee machine using language " + String(lang)
+    throw 'Not implemented';
   },
-
   iShutdownTheCoffeeMachine: function () {
-    this.sut.stop();
+    // TODO: Implement action: "Shutdown coffee machine"
+    throw 'Not implemented';
   },
-
   messageMessageShouldBeDisplayed: function (message) {
-    assert.equal(message || "", this.sut.get('message'));
+    // TODO: Implement result: "Displayed message is \"" + String(message) + "\""
+    throw 'Not implemented';
   },
-
   coffeeShouldBeServed: function () {
-    assert.equal(true, this.sut.get('coffeeServed'));
+    // TODO: Implement result: "Coffee is served :)"
+    throw 'Not implemented';
   },
-
   coffeeShouldNotBeServed: function () {
-    assert.equal(false, this.sut.get('coffeeServed'));
+    // TODO: Implement result: "No coffee is served :("
+    throw 'Not implemented';
   },
-
   iTakeACoffee: function () {
-    this.sut.takeCoffee();
+    // TODO: Implement action: "Take a coffee"
+    throw 'Not implemented';
   },
-
   iEmptyTheCoffeeGrounds: function () {
-    this.sut.emptyGrounds();
+    // TODO: Implement action: "Empty coffee grounds"
+    throw 'Not implemented';
   },
-
   iFillTheBeansTank: function () {
-    this.sut.fillBeans();
+    // TODO: Implement action: "Fill beans"
+    throw 'Not implemented';
   },
-
   iFillTheWaterTank: function () {
-    this.sut.fillTank();
+    // TODO: Implement action: "Fill water tank"
+    throw 'Not implemented';
   },
-
   iTakeCoffeeNumberCoffees: function (coffee_number) {
-    this.handled = this.handled || [];
 
-    while ((coffee_number > 0)) {
-      this.iTakeACoffee();
-      coffee_number = coffee_number - 1;
-
-      if (this.handled.indexOf('water') >= 0) {
-        this.iFillTheWaterTank();
-      }
-
-      if (this.handled.indexOf('beans') >= 0) {
-        this.iFillTheBeansTank();
-      }
-
-      if (this.handled.indexOf('grounds') >= 0) {
-        this.iEmptyTheCoffeeGrounds();
-      }
-    }
   },
-
   theCoffeeMachineIsStarted: function () {
-    this.iStartTheCoffeeMachineUsingLanguageLang();
+    this.iStartTheCoffeeMachineUsingLanguageLang("en");
   },
-
-  iHandleWaterTank: function () {
-    this.handled = this.handled || [];
-    this.handled.push('water');
-  },
-
-  iHandleBeans: function () {
-    this.handled = this.handled || [];
-    this.handled.push('beans');
-  },
-
-  iHandleCoffeeGrounds: function () {
-    this.handled = this.handled || [];
-    this.handled.push('grounds');
-  },
-
   iHandleEverythingExceptTheWaterTank: function () {
     this.iHandleCoffeeGrounds();
     this.iHandleBeans();
   },
+  iHandleWaterTank: function () {
 
+  },
+  iHandleBeans: function () {
+
+  },
+  iHandleCoffeeGrounds: function () {
+
+  },
   iHandleEverythingExceptTheBeans: function () {
     this.iHandleWaterTank();
     this.iHandleCoffeeGrounds();
   },
-
   iHandleEverythingExceptTheGrounds: function () {
     this.iHandleWaterTank();
     this.iHandleBeans();
   },
-
   displayedMessageIs: function (__free_text) {
     this.messageMessageShouldBeDisplayed(__free_text);
   },
-
   iSwitchToSettingsMode: function () {
-    this.sut.showSettings();
+
   },
-
   settingsShouldBe: function (__datatable) {
-    var cells, settings = {};
-    __datatable.split("\n").forEach(function(line) {
-      cells = line.split('|');
-      settings[cells[1].trim()] = cells[2].trim();
-    });
 
-    assert.deepEqual(this.sut.getSettings(), settings);
   }
 };
