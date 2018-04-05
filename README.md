@@ -25,7 +25,12 @@ To update the tests:
     hiptest-publisher -c mocha.conf --only=tests --test-run-id=147515
 
 The tests are generated in the [``test``](https://github.com/donfouetplatini/hps-javascript-mocha/tree/master/test) directory.
+Installation
+---------
 
+    npm install -g mocha-junit-reporter
+    
+    
 Run tests
 ---------
 
