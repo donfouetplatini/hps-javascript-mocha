@@ -22,9 +22,9 @@ Update tests
 
 To update the tests:
 
-    hiptest-publisher -c mocha.conf --only=tests
+    hiptest-publisher -c mocha.conf --only=tests --test-run-id=147515
 
-The tests are generated in the [``test``](https://github.com/hiptest/hps-javascript-mocha/tree/master/test) directory.
+The tests are generated in the [``test``](https://github.com/donfouetplatini/hps-javascript-mocha/tree/master/test) directory.
 
 Run tests
 ---------
@@ -34,6 +34,6 @@ To build the project and run the tests, use the following command:
 
     mocha test --recursive --reporter mocha-junit-reporter
 
-The SUT implementation can be seen in [``src/coffee_machine.js``](https://github.com/hiptest/hps-javascript-mocha/blob/master/src/coffee_machine.js)
+The SUT implementation can be seen in [``src/coffee_machine.js``](https://github.com/donfouetplatini/hps-javascript-mocha/tree/master/src/coffee_machine.js)
 
 The test report is generated in ```test-results.xml```
