@@ -5,6 +5,7 @@ before_install:
   - rvm use 2.2
   - gem install hiptest-publisher
   - hiptest-publisher -c mocha.conf --token=$SECRET_TOKEN --only=tests --test-run-id=147515
+  - npm install -g mocha-junit-reporter
 
 script:
   - mocha test --recursive --reporter mocha-junit-reporter
